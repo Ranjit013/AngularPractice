@@ -1,0 +1,27 @@
+<button (click)="getSelectedRows()">Get Selected Rows</button>
+
+<ag-grid-angular
+  style="width: 500px; height: 500px;"
+  class="ag-theme-alpine"
+  [rowData]="rowData | async"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef"
+  [autoGroupColumnDef]="autoGroupColumnDef"
+  (gridReady)="onGridReady($event)"
+  rowSelection="multiple">
+</ag-grid-angular>
+
+
+<!--<ul>-->
+<!-- <span *ngFor="let item of items;">-->
+<!--   <li *ngIf="item.active">-->
+<!--     {{item.name}}-->
+<!--   </li>-->
+<!-- </span>-->
+<!--</ul>-->
+
+<ng-container *ngIf="items1">
+  <div *ngFor="let item of items1;">
+    {{item.name}}
+  </div>
+</ng-container>

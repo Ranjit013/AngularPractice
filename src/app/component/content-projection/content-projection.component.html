@@ -1,0 +1,17 @@
+<ng-content></ng-content>
+<div>waht the fuck</div>
+<ng-content></ng-content>
+
+<h1 #hello> Hello World</h1>
+<ng-template #mytemplate>
+This is something I will be using for NG Tempalte
+
+</ng-template>
+
+<div *ngIf="adminTemplate">
+  <ng-container [ngTemplateOutlet]="adminTemplate1" [ngTemplateOutletContext]="{$implicit: 'ranjit'}">
+  </ng-container>
+</div>
+
+<ng-template #adminTemplate1 let-name>This is really ridiculous {{name}}</ng-template>
+
